@@ -22,15 +22,15 @@ data['prod_name'] = 'HOME'
 data['prod_version'] = '001'
 data['base_path'] = 'prtl'
 r=createPortal(data)
-print r.text
+print(r.text)
 
 r=getPortal()
-print r.text
+print(r.text)
 parsedJson=json.loads(r.text)
-print json.dumps(parsedJson, indent=4, sort_keys=True)
+print(json.dumps(parsedJson, indent=4, sort_keys=True))
 for prtl in parsedJson:
     if 'id' in prtl:
         r=getPortalDetails(prtl['id'])
-        print r.text
+        print(r.text)
         jsonObj = json.loads(r.text)
-        print json.dumps(jsonObj, indent=4, sort_keys=True)
+        print(json.dumps(jsonObj, indent=4, sort_keys=True))

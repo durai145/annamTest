@@ -15,16 +15,21 @@ data={}
 #     String prodName;
 #     String prodVersion;
 
+#     String roleName;
+#     String status;
+#     int roleValue;
+#     String prtlName;
+#     String prtlVersion;
 
-data['prod_name'] = 'HOME'
-data['prod_version'] = '001'
-r=createProduct(data)
+data['prtl_name'] = 'GPASSOSP'
+data['prtl_version'] = '001'
+data['role_name'] = 'ADMIN'
+data['status'] = '001'
+data['role_value'] = 0xFF
+r=createRole(data)
 print(r.text)
 
-r=getProducts()
+r=getRoles()
 print(r.text)
 parsedJson=json.loads(r.text)
 print(json.dumps(parsedJson, indent=4, sort_keys=True))
-for prod in parsedJson:
-    print(prod)
-            

@@ -14,10 +14,11 @@ data['last_name'] = 'govindaraj'
 data['password'] = '1qaz2wsx'
 data['user_type'] = 'Employee'
 data['user_role'] = 'SECADMIN'
+data['role_name'] = 'ADMIN'
 
-print json.dumps(data, indent=4, sort_keys=True)
+print(json.dumps(data, indent=4, sort_keys=True))
 r=createV1User(data)
-print r.text
+print(r.text)
 createResp=json.loads(r.text)
 #  "error": "Not Found", 
 #  "message": "Portal is not exists", 

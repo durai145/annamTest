@@ -15,7 +15,7 @@ data['password'] = '1qaz2wsx'
 data['user_type'] = 'Employee'
 data['user_role'] = 'Security_Admin'
 
-print json.dumps(data, indent=4, sort_keys=True)
+print(json.dumps(data, indent=4, sort_keys=True))
 r=createUser(data)
 r=getUserDetails(data['emp_id'])
 parsedJson=json.loads(r.text)
